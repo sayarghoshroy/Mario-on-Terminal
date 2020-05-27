@@ -1,22 +1,29 @@
 # Mario on your Terminal
 
-#### To run the game, type the command: python3 run_game.py
+![](https://github.com/sayarghoshroy/Mario-on-Terminal/blob/master/screens/mario_jump.png)
 
-#### Note : You will get a message saying No such file or directory while doing an activity which involves playing a sound. The sound files will be put into the game directory and the code will work fine after that.
+#### To run the game, type the command: python3 run_game.py
 
 ---
 
+### Controls
+
+<kbd>A</kbd> Go Left
+
+<kbd>W</kbd> Jump
+
+<kbd>D</kbd> Go Right
+
+---
 ## Description
 
 You have to successfully complete 2 levels to win.
 
 Mario, which is the player is the box full of M's.
 
-You cannot land on top of the large red pipe full of X's. It is a pipe out of which molten lava emanates out and instant death awaits anyone who lands on it, so beware.
+You cannot land on top of the large red pipe full of X's. Molten lava emanates out of such pipes and instant death awaits anyone who lands upon it, so beware.
 
-The green '-' is your running area.
-
-The green '-' lines are mini-bridges. They allow you to jump higher in order to collect the white 'V's which are gems. You cannot break a bridge. You can jump on top of them. You are also allowed to climb upon a bridge without a full jump. To do so, simply jump at a position adjacent to the bridge and direct yourself towards it and you will have climbed upon it. This is an additional characteristic of a bridge.
+The green '-' lines are mini-bridges. They allow you to jump higher in order to collect the white 'V's which are gems. You cannot break a bridge. You can jump on top of them. You are also allowed to climb upon a bridge without a full jump. To do so, simply jump at a position adjacent to the bridge and direct yourself towards it. 
 
 The white 'O's are the coins. Collect as many as you can.
 
@@ -45,24 +52,22 @@ Press 'Q' to end the game.
 6. In level 2, the enemies move faster and the boss can jump up even higher making things worse for Mario.
 
 7. The point system is as follows:
-	Coin : 10 Rupees
-	Gem : 500 Rupees
-	Minion : 1000 Rupees
-	Boss : 10000 Rupees
+	- Collect Coin : 10 
+	- Collect Gem : 500
+	- Kill a Minion : 1000
+	- Kill the Boss : 10000
 
 ---
 
-# Input Constraint:
+### Advice
 
-It is advisable not to press and hold a key. You may end up going somewhere you do not want to. Keep in mind that mario moves three steps at a time so hitting the keys continuously is fine for rapid movement.
+Press and hold is not advisable. You may end up going somewhere you do not want to. Keep in mind that mario moves three steps at a time so hitting the keys continuously is fine for rapid movement.
 
 ---
 
-# Note:
+### Note
 
-Like real life, Mario has only a single life in the game. The game is small and just has two levels. Hence, I tried to make it challenging but keeping it winnable at each step. Hence, to win, one needs to be perfect.
-
-Try to collect all coins and gems which are placed at the maximum possible heights upto which you can jump.
+Like real life, Mario has only a single life in the game. The game is small and just has two levels. Hence, I tried to make it challenging while preserving winnability at each step. To win, one needs to be perfect.
 
 Open the terminal in fullscreen mode to play the game.
 
