@@ -50,10 +50,10 @@ def update_score(x, y):
         for j in range(y, y+3):
             if bg.total_bg[j, i] == 6:
                 score = score + 10
-                subprocess.Popen(["aplay", "-q", "./ding.wav"])
+                subprocess.Popen(["aplay", "-q", "./music/ding.wav"])
             elif bg.total_bg[j, i] == 8:
                 score = score + 500
-                subprocess.Popen(["aplay", "-q", "./ding.wav"])
+                subprocess.Popen(["aplay", "-q", "./music/ding.wav"])
 
 
 def check_boss():
@@ -104,7 +104,7 @@ def find_and_kill_enemy(x):
         if (x <= pos and pos <= (x+3)) or (x <= (pos+3) and (pos+3) <= (x+3)):
             bg.total_bg[27:30, pos:pos+4] = 0
             bg.minions.remove(bad_boy)
-            subprocess.Popen(["aplay", "-q", "./ding.wav"])
+            subprocess.Popen(["aplay", "-q", "./music/ding.wav"])
             score = score + 1000
             break
 
@@ -117,7 +117,7 @@ def activate_jump():
     y = player.get_Y()
     if (bg.total_bg[y+3, x] == 1 or bg.total_bg[y+3, x+4] == 1 or bg.total_bg[y+3, x] == 4 or bg.total_bg[y+3, x+4] == 4) and jump_active == 0:
         # you can begin the jump
-        subprocess.Popen(["aplay", "-q", "./jump.wav"])
+        subprocess.Popen(["aplay", "-q", "./music/jump.wav"])
         jump_active = 1
         jump_state = 0
 
@@ -195,7 +195,7 @@ while level <= 2:
         level_Up_minions()
         color_map[5] = Back.BLUE
 
-    process_id = (subprocess.Popen(["aplay", "-q", "./sound.wav"]))
+    process_id = (subprocess.Popen(["aplay", "-q", "./music/sound.wav"]))
     boss_active = 0
 
     while(1):
@@ -304,7 +304,7 @@ while level <= 2:
 
         if flag == 2:
             # the boss has been hit
-            subprocess.Popen(["aplay", "-q", "./ding.wav"])
+            subprocess.Popen(["aplay", "-q", "./music/ding.wav"])
             time.sleep(0.8)
             bg.total_bg[bg.boss.get_Y():(bg.boss.get_Y()+4),
                         bg.boss.get_X():(bg.boss.get_X()+4)] = 0
@@ -330,7 +330,7 @@ while level <= 2:
                     print("You Finished Level 1. Get Ready for Level 2")
                 process_id.kill()
                 ip = 0
-                subprocess.Popen(["aplay", "-q", "./win.wav"])
+                subprocess.Popen(["aplay", "-q", "./music/win.wav"])
                 time.sleep(7)
                 level = level + 1
                 break
@@ -338,7 +338,7 @@ while level <= 2:
         if (y == 27 and (bg.total_bg[y+4, x] == 0 or bg.total_bg[y+4, x+3] == 0)) or y == -1 or flag == 1 or check == -1 or check_again == -1 or battle_result == -1 or (bg.total_bg[y+3, x] == 2 or bg.total_bg[y+3, x+3] == 2):
             print("Dead :(")
             process_id.kill()
-            subprocess.Popen(["aplay", "-q", "./dead.wav"])
+            subprocess.Popen(["aplay", "-q", "./music/dead.wav"])
             break
 
         time.sleep(0.2)
