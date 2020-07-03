@@ -2,7 +2,11 @@
 
 ![](https://github.com/sayarghoshroy/Mario-on-Terminal/blob/master/screens/mario_jump.png)
 
-#### To run the game, type the command: python3 run_game.py
+#### To run:
+
+```bash
+python3 run_game.py
+```
 
 ---
 
@@ -71,6 +75,6 @@ Like real life, Mario has only a single life in the game. The game is small and 
 
 Open the terminal in fullscreen mode to play the game.
 
-Enjoy.
+All the Best and Enjoy!
 
 ---
